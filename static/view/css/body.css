@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,400&display=swap');
+:root{
+    --base:#gf222e; 
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif, 'Lato', sans-serif;
+
+}
+
+body{
+    /* background-color: red; */
+}

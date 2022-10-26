@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 14:45-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: arbitrator/api/serializers/account.py:126
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: arbitrator/api/views/account.py:70
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: arbitrator/api/views/account.py:132
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: arbitrator/settings.py:144
+msgid "English"
+msgstr ""
+
+#: arbitrator/settings.py:145
+msgid "Spanish"
+msgstr ""
+
+#: core/admin/user.py:21
+msgid "Personal info"
+msgstr ""
+
+#: core/admin/user.py:35
+msgid "Permissions"
+msgstr ""
+
+#: core/admin/user.py:46
+msgid "Important dates"
+msgstr ""
+
+#: core/apps.py:8
+msgid "Core"
+msgstr ""
+
+#: core/models/address.py:8
+msgid "user"
+msgstr ""
+
+#: core/models/address.py:11 core/models/address.py:27
+msgid "address"
+msgstr ""
+
+#: core/models/address.py:14
+msgid "address 2"
+msgstr ""
+
+#: core/models/address.py:17
+msgid "city"
+msgstr ""
+
+#: core/models/address.py:20
+msgid "state"
+msgstr ""
+
+#: core/models/address.py:23
+msgid "zip code"
+msgstr ""
+
+#: core/models/address.py:28
+msgid "addresses"
+msgstr ""
+
+#: core/models/company_category.py:12
+msgid "name"
+msgstr ""
+
+#: core/models/company_category.py:15
+msgid "description"
+msgstr ""
+
+#: core/models/company_category.py:18
+msgid "order"
+msgstr ""
+
+#: core/models/company_category.py:21
+msgid "deleted"
+msgstr ""
+
+#: core/models/company_category.py:27 core/models/user.py:53
+msgid "category"
+msgstr ""
+
+#: core/models/company_category.py:28
+msgid "categories"
+msgstr ""
+
+#: core/models/user.py:46
+msgid "email address"
+msgstr ""
+
+#: core/models/user.py:49
+msgid "company"
+msgstr ""
+
+#: core/models/user.py:56
+msgid "phone number"
+msgstr ""
+
+#: core/models/user.py:59
+msgid "language"
+msgstr ""
+
+#: core/models/user.py:63
+msgid "timezone"
+msgstr ""
+
+#: core/models/user.py:73
+msgid "User"
+msgstr ""
+
+#: core/models/user.py:74
+msgid "Users"
+msgstr ""

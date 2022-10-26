@@ -1,0 +1,117 @@
+.container-logo-search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content:center;
+    width: 60px;
+    height: 60px;
+    background: #F5FF78;
+    border-radius: 50%;
+    
+}
+
+.logo-container>a>img {
+    
+    translate: 1px -2px;
+
+    width: 45px;
+    height: 30px;
+}
+
+/* nav User */
+.navbar-container-user {
+    width: 100%;
+    background-color: rgb(197, 197, 197);
+}
+
+.search-box {
+    height: 35px;
+    line-height: 35px;
+}
+
+.search-box>input {
+    color: black;
+    border: none;
+    outline: none;
+    /* background: hsla(0, 0%, 100%, 0.842); */
+    height: 100%;
+    width: 1;
+    padding: 0 10px 0 35px;
+    font-size: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.search-box>i {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 116, 218); */
+    /* height: 100%; */
+    /* padding: 8px; */
+    position: absolute;
+    translate: 10px 7px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.search-box>i:hover {
+    color: blue;
+}
+
+.search-box>i::after {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    content: '';
+    background-color: #ffffff;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.search-box i:hover::after {
+    width: 100%;
+}
+
+.container-user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navbar-user-name>a,
+.navbar-user-email>a {
+    color: black !important;
+    text-decoration: none;
+    line-height: 19px;
+
+}
+
+.navbar-user-name {
+    font-weight: 600;
+    text-align: end !important;
+}
+
+.user-icon {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 14px;
+}
+
+.user-icon>a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}

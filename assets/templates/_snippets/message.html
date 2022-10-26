@@ -1,0 +1,37 @@
+{% if messages %}
+<ul class="messages ">
+    {% for message in messages %}
+
+        {% if message.tags == 'success' %}
+        <div class="alert alert-success" role="alert" id="notif">
+            <li class="{{ message.tags }}"} >{{ message }}</li>
+        </div>
+        {% elif message.tags == 'info' %}
+        <div class="alert alert-info" role="alert" id="notif">
+            <li class="{{ message.tags }}"}>{{ message }}</li>
+        </div>
+        {% elif message.tags == 'debug' %}
+        <div class="alert alert-warning" role="alert" id="notif">
+            <li class="{{ message.tags }}"}>{{ message }}</li>
+        </div>
+        {% elif message.tags == 'warning' %}
+        <div class="alert alert-warning" role="alert" id="notif">
+            <li class="{{ message.tags }}"}>{{ message }}</li>
+        </div>
+        {% elif message.tags == 'error' %}
+        <div class="alert alert-danger" role="alert" id="notif">
+            <li class="{{ message.tags }}"}>{{ message }}</li>
+        </div>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+{% endif %}
+
+<script>
+  const notif = document.getElementById("notif") 
+   setTimeout(() => {
+    notif.remove()
+  }, 8 * 1000) 
+
+</script>

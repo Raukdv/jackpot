@@ -1,0 +1,88 @@
+{% include 'base/layout.html' %}
+{% load static %}
+
+{%block navbar%}
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+
+<header>
+    {% comment %} navbar-login {% endcomment %}
+    <nav class="navbar bg-light ">
+        <div class="container-fluid justify-content-center logo-container">
+            
+          <a  href="/"><img src="{% static 'view/images/logo.png' %}"  alt="LOGO"></a>
+        </div>
+    </nav>
+
+        {% comment %} navbar-usuario {% endcomment %}
+      {% comment %} {% if user.is_authenticated %} {% endcomment %}
+
+    <nav class="navbar navbar-container-user  bg-light container-fluid">
+        <div class="container-logo-search ms-4">
+            <div class="logo-container">
+                <a  href="/"><img src="{% static 'view/images/logo.png' %}"  alt="LOGO"></a>
+            </div>
+    
+            <div class="search-box mx-5">  
+                <i class="fa-solid fa-magnifying-glass"></i> 
+                <input type="search" placeholde="Search by dispute code, name or email">
+            </div>
+
+            {% comment %} Options for user {% endcomment %}
+            {% if user.is_authenticated %}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Options
+                </button>
+                <ul class="dropdown-menu">
+                    {% if user.type == 'creator' %}
+                    <li><a class="dropdown-item" href="{% url 'view:creator_list_disputes' %}">Claims</a></li>
+                    <li><a class="dropdown-item" href="{% url 'view:creator_who_to_dispute' %}">Create Claim</a></li>
+                    {% endif %}
+                    {% if user.type == 'arbitrator' %}
+                    <li><a class="dropdown-item" href="{% url 'view:arbitrator_list_disputes' %}">Claims</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{% url 'view:list_dispute' %}">List Disputes</a></li>
+                    <li><a class="dropdown-item" href="{% url 'view:create_dispute' %}">Create Disputes</a></li>
+                    {% endif %}
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{% url 'view:user_detail' user.pk %}">Perfil</a></li>
+                    <li><a class="dropdown-item" href="{% url 'view:user_update' user.pk %}">Update Perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/admin/">Admin Django</a></li>
+                
+                </ul>
+            </div>
+            {% endif %}
+            {% comment %} Options for user {% endcomment %}
+
+          
+        </div>
+        
+
+        <div class="container-user">
+            <div>
+                {% if user.is_authenticated %}
+                <div class='navbar-user-name me-4'>
+                    <a href="">{{user.first_name}} {{user.last_name}}</a>
+                </div>
+                <div class='navbar-user-email me-4'>
+                    <a href=""></a>
+                </div>
+                {% else %}
+                <div class='navbar-user-name me-4'>
+                    <a href="">Login</a>
+                </div>
+                <div class='navbar-user-email me-4'>
+                    <a href="">Sign up</a>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class=" user-icon me-3"><a class="" href="">UN</a></div>
+        </div>
+    </nav>
+</header>
+{%endblock navbar%}

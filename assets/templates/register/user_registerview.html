@@ -1,0 +1,72 @@
+{% load static %}
+{% include 'base/layout.html' %}
+{% include 'navbar/navbar.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+
+    <div class="col-md-6 leftside">
+            <div class=" p-4 mb-4">
+                    <h1 class="ms-5">Let us help you <br> settle this!</h1>
+                   </div>
+                   <div class="container-iconos text-center">
+                       <div>
+                           <div class="iconos  align-items-center ">
+                               <i class="fa-solid fa-file-lines"></i>
+                           </div>
+   
+                           <div class="description-iconos"> 
+                               <h3>Create</h3>
+                               <p>your dispute</p>
+                           </div>
+                       </div>
+                       
+                       <div>
+                           <div class="iconos-2  align-items-center ">
+                               <span class='notification-icono-2'>1</span>
+                               <i class="fa-regular fa-handshake"></i>
+                           </div>
+   
+                           <div class="description-iconos">
+                               <h3>Agreed</h3>
+                               <p>with the other party</p>
+                           </div>
+                       </div>
+   
+                       <div>
+                           <div class="iconos-3  align-items-center ">
+                               <i class="fa-solid fa-dollar-sign"></i>
+                           </div>
+   
+                           <div class="description-iconos">
+                               <h3>Claim</h3>
+                               <p>your money</p>
+                           </div>
+                       </div>
+                   </div>
+        </div>
+
+        <div class="col-md-6  rightside">
+            <div class="m-3">
+                <h1>Sign up as {{pretender_user|title}}!</h1>
+                <span>Create your credentials and create you account</span>
+            </div>
+
+            {% include '_snippets/message.html' %}
+
+            <form method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                
+                {{ form.as_p }}
+                <button class=" btn btn-primary btn-lg from-control" type="submit">Register</button>
+
+            </form>
+
+            <input type="hidden" name="spam_key" id="spam_key" value="{{pretender_user}}" />
+            <script src="{% static 'js/change_type_input.js' %}"></script>
+
+        </div>
+    </div>
+</div>
+

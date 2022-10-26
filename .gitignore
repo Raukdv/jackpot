@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VS Code
+.vscode
+
+# MacOS
+.DS_Store
+
+#Static of production
+static_collected
+
+#Migrations files - Exclude all migrations file.
+core/migrations/
+show/migrations/

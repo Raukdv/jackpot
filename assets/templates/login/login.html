@@ -1,0 +1,100 @@
+ {% include 'base/layout.html' %}
+ {% include 'navbar/navbar.html' %}
+ 
+ {% load i18n %}
+
+ {% block content %}
+
+ <div class="container-fluid">
+    <div class="row ">
+
+            <div class="col-md-6  leftside ">
+                {% block  logincontent %}
+                <div class=" p-4 mb-4">
+                    <h1 class="ms-5">Let us help you <br> settle this!</h1>
+                   </div>
+                   <div class="container-iconos text-center">
+                       <div>
+                           <div class="iconos  align-items-center ">
+                               <i class="fa-solid fa-file-lines"></i>
+                           </div>
+   
+                           <div class="description-iconos"> 
+                               <h3>Create</h3>
+                               <p>your dispute</p>
+                           </div>
+                       </div>
+                       
+                       <div>
+                           <div class="iconos-2  align-items-center ">
+                               <span class='notification-icono-2'>1</span>
+                               <i class="fa-regular fa-handshake"></i>
+                           </div>
+   
+                           <div class="description-iconos">
+                               <h3>Agreed</h3>
+                               <p>with the other party</p>
+                           </div>
+                       </div>
+   
+                       <div>
+                           <div class="iconos-3  align-items-center ">
+                               <i class="fa-solid fa-dollar-sign"></i>
+                           </div>
+   
+                           <div class="description-iconos">
+                               <h3>Claim</h3>
+                               <p>your money</p>
+                           </div>
+                       </div>
+                   </div>
+                {% endblock logincontent %}%
+                
+            </div>
+
+  {% comment %} LOGIN SECTION {% endcomment %}
+
+       <div class='col-md-6 g-0 mt-4 rightside align-items-center'>
+           <div class="m-3">
+               <h1>Welcome back!</h1>
+               <span>Enter your credentials and enter you account</span>
+           </div>
+           
+            {% include '_snippets/errors.html' %}
+
+            <form action="" class=" form-control-sm" method="post" {% if form.is_multipart %}enctype="multipart/form-data"{% endif %}>
+                {% csrf_token %}
+
+                    <div class="mb-3 rows ">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">{{form.username.label}}</label>
+                            
+                        <div class="col-sm-6">
+                            {{form.username}}
+                        </div>
+                    </div>
+
+                    <div class="mb-3 rows ">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">{{form.password.label}}</label>
+                        <div class="col-sm-6">
+                            {{form.password}}
+                        </div>
+                    </div> 
+                    
+                <button type="submit" class="btn btn-primary mt-4">{% trans "login" %}</button>
+            
+            </form>
+
+            <div class="text-center mt-5">
+                <a href="" class="link-secondary">Forgot your password?</a>
+            </div>
+
+            <div  class="text-center mt-2"> 
+                <a href="" class="link-secondary">Don&#39;t have an account? Sign ups</a>
+            </div>
+       </div>
+
+    </div>
+ </div>
+
+
+{% endblock content %}
